@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hasta tu próximo cumpleaños</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PANTALLA DE BIENVENIDA -->
+
+    <main class="pantalla" id="bienvenida">
+
+        <h1>Hasta tu próximo cumpleaños</h1>
+
+        <p>
+            Algunas historias deben leerse de inmediato.
+        </p>
+
+        <p>
+            Otras esperan pacientemente su momento.
+        </p>
+
+        <p>
+            Durante los próximos doce meses habrá algo esperándote.
+        </p>
+
+        <button onclick="mostrarContrasena()">
+            Comenzar
+        </button>
+
+    </main>
+
+
+    <!-- PANTALLA DE CONTRASEÑA -->
+
+    <main class="pantalla oculta" id="contrasena">
+
+        <h1>Una pequeña llave...</h1>
+
+        <p>
+            Solo necesitas una palabra para entrar.
+        </p>
+
+        <input
+            type="password"
+            id="campoContrasena"
+            placeholder="Escribe la contraseña"
+        >
+
+        <button onclick="entrar()">
+            Entrar
+        </button>
+
+        <p id="mensajeError"></p>
+
+    </main>
+
+
+    <!-- PANTALLA DE LA BIBLIOTECA -->
+
+<main class="pantalla oculta" id="biblioteca">
+
+    <h1>La biblioteca</h1>
+
+    <p>
+        Doce meses, doce cartas.
+    </p>
+
+    <div class="cartas">
+
+    <div class="carta-contenedor">
+        <button class="carta" onclick="abrirAgosto()">Agosto</button>
+        <p class="contador" id="contadorAgosto"></p>
+    </div>
+
+    <div class="carta-contenedor">
+        <button class="carta" onclick="abrirSeptiembre()">Septiembre</button>
+        <p class="contador" id="contadorSeptiembre"></p>
+    </div>
+
+    <div class="carta-contenedor">
+        <button class="carta" onclick="abrirOctubre()">Octubre</button>
+        <p class="contador" id="contadorOctubre"></p>
+    </div>
+
+    <div class="carta-contenedor">
+        <button class="carta" onclick="abrirNoviembre()">Noviembre</button>
+        <p class="contador" id="contadorNoviembre"></p>
+    </div>
+
+    <div class="carta-contenedor">
+        <button class="carta" onclick="abrirDiciembre()">Diciembre</button>
+        <p class="contador" id="contadorDiciembre"></p>
+    </div>
+
+    <div class="carta-contenedor">
+        <button class="carta" onclick="abrirEnero()">Enero</button>
+        <p class="contador" id="contadorEnero"></p>
+    </div>
+
+    <div class="carta-contenedor">
+        <button class="carta" onclick="abrirFebrero()">Febrero</button>
+        <p class="contador" id="contadorFebrero"></p>
+    </div>
+
+    <div class="carta-contenedor">
+        <button class="carta" onclick="abrirMarzo()">Marzo</button>
+        <p class="contador" id="contadorMarzo"></p>
+    </div>
+
+    <div class="carta-contenedor">
+        <button class="carta" onclick="abrirAbril()">Abril</button>
+        <p class="contador" id="contadorAbril"></p>
+    </div>
+
+    <div class="carta-contenedor">
+        <button class="carta" onclick="abrirMayo()">Mayo</button>
+        <p class="contador" id="contadorMayo"></p>
+    </div>
+
+    <div class="carta-contenedor">
+        <button class="carta" onclick="abrirJunio()">Junio</button>
+        <p class="contador" id="contadorJunio"></p>
+    </div>
+
+    <div class="carta-contenedor">
+        <button class="carta" onclick="abrirJulio()">Julio</button>
+        <p class="contador" id="contadorJulio"></p>
+    </div>
+
+</div>
+
+</main>
+
+<!-- CARTA DE DICIEMBRE -->
+
+<main class="pantalla oculta" id="cartaDiciembre">
+
+    <h1>Diciembre</h1>
+
+    <img
+        src="cartas/diciembre.png"
+        alt="Carta de diciembre"
+        class="imagen-carta"
+    >
+
+    <button onclick="volverBiblioteca()">
+        Volver a la biblioteca
+    </button>
+
+</main>
+
+<!-- CARTA DE ABRIL -->
+
+<main class="pantalla oculta" id="cartaAbril">
+
+    <h1>Abril</h1>
+
+    <img
+        src="cartas/abril.png"
+        alt="Carta de abril"
+        class="imagen-carta"
+    >
+
+    <button onclick="volverBiblioteca()">
+        Volver a la biblioteca
+    </button>
+
+</main>
+
+<!-- CARTA DE MAYO -->
+
+<main class="pantalla oculta" id="cartaMayo">
+
+    <h1>Mayo</h1>
+
+    <img
+        src="cartas/mayo.png"
+        alt="Carta de mayo"
+        class="imagen-carta"
+    >
+
+    <button onclick="volverBiblioteca()">
+        Volver a la biblioteca
+    </button>
+
+</main>
+
+
+<!-- CARTA DE JUNIO -->
+
+<main class="pantalla oculta" id="cartaJunio">
+
+    <h1>Junio</h1>
+
+    <img
+        src="cartas/junio.png"
+        alt="Carta de junio"
+        class="imagen-carta"
+    >
+
+    <button onclick="volverBiblioteca()">
+        Volver a la biblioteca
+    </button>
+
+</main>
+
+
+<!-- CARTA DE JULIO -->
+
+<main class="pantalla oculta" id="cartaJulio">
+
+    <h1>Julio</h1>
+
+    <img
+        src="cartas/julio.png"
+        alt="Carta de julio"
+        class="imagen-carta"
+    >
+
+    <button onclick="volverBiblioteca()">
+        Volver a la biblioteca
+    </button>
+
+</main>
+
+
+<!-- CARTA DE OCTUBRE -->
+
+<main class="pantalla oculta" id="cartaOctubre">
+
+    <h1>Octubre</h1>
+
+    <img
+        src="cartas/octubre.png"
+        alt="Carta de octubre"
+        class="imagen-carta"
+    >
+
+    <button onclick="volverBiblioteca()">
+        Volver a la biblioteca
+    </button>
+
+</main>
+
+
+<!-- CARTA DE ENERO -->
+
+<main class="pantalla oculta" id="cartaEnero">
+
+    <h1>Enero</h1>
+
+    <img
+        src="cartas/enero.png"
+        alt="Carta de enero"
+        class="imagen-carta"
+    >
+
+    <button onclick="volverBiblioteca()">
+        Volver a la biblioteca
+    </button>
+
+</main>
+
+<!-- CARTA DE FEBRERO -->
+
+<main class="pantalla oculta" id="cartaFebrero">
+
+    <h1>Febrero</h1>
+
+    <p>
+        Las palabras siempre encuentran a quien las necesita,
+        te dejo algunas de mis favoritas. 📖
+    </p>
+
+    <p>
+        "Que cada día nos encuentre con el coraje de empezar de nuevo."
+    </p>
+
+    <p>
+        "Tantas veces me mataron, tantas veces me morí,
+        sin embargo estoy aquí resucitando."
+        <br>
+        — María Elena Walsh
+    </p>
+
+    <p>
+        "Nada está perdido si se tiene el valor de proclamar
+        que todo está perdido y hay que empezar de nuevo."
+        <br>
+        — Julio Cortázar
+    </p>
+
+    <p>
+        "Del laberinto se sale por arriba."
+        <br>
+        — Leopoldo Marechal
+    </p>
+
+    <p>
+        "Los hermanos sean unidos, porque esa es la ley primera."
+        <br>
+        — José Hernández
+    </p>
+
+    <p>
+        "Las ideas no se matan."
+        <br>
+        — Domingo F. Sarmiento
+    </p>
+
+    <p>
+        "Hay derrotas que tienen más dignidad que una victoria."
+        <br>
+        — Jorge Luis Borges
+    </p>
+
+    <p>
+        "La felicidad no necesita ser transmutada en belleza,
+        pero la desventura sí."
+        <br>
+        — Jorge Luis Borges
+    </p>
+
+    <p>
+        By Mer, feliz Febrero
+    </p>
+
+    <button onclick="volverBiblioteca()">
+        Volver a la biblioteca
+    </button>
+
+</main>
+
+<!-- CARTA DE MARZO -->
+
+<main class="pantalla oculta" id="cartaMarzo">
+
+    <h1>Marzo</h1>
+
+    <img
+        src="cartas/marzo.png"
+        alt="Carta de marzo"
+        class="imagen-carta"
+    >
+
+    <button onclick="volverBiblioteca()">
+        Volver a la biblioteca
+    </button>
+
+</main>
+
+
+<!-- CARTA DE AGOSTO -->
+
+<main class="pantalla oculta" id="cartaAgosto">
+
+    <h1>Agosto</h1>
+
+    <img
+        src="cartas/agosto.png"
+        alt="Carta de agosto"
+        class="imagen-carta"
+    >
+
+    <button onclick="volverBiblioteca()">
+        Volver a la biblioteca
+    </button>
+
+</main>
+
+
+<!-- CARTA DE SEPTIEMBRE -->
+
+<main class="pantalla oculta" id="cartaSeptiembre">
+
+    <h1>Septiembre</h1>
+
+    <img
+        src="cartas/septiembre.png"
+        alt="Carta de septiembre"
+        class="imagen-carta"
+    >
+
+    <button onclick="volverBiblioteca()">
+        Volver a la biblioteca
+    </button>
+
+</main>
+
+
+<!-- CARTA DE NOVIEMBRE -->
+
+<main class="pantalla oculta" id="cartaNoviembre">
+
+    <h1>Noviembre</h1>
+
+    <img
+        src="cartas/noviembre.png"
+        alt="Carta de noviembre"
+        class="imagen-carta"
+    >
+
+    <button onclick="volverBiblioteca()">
+        Volver a la biblioteca
+    </button>
+
+</main>
+
+    <!-- FUNCIONES DE LA PÁGINA -->
+
+    <script>
+
+function mostrarContrasena() {
+
+    document.getElementById("bienvenida").classList.add("oculta");
+
+    document.getElementById("contrasena").classList.remove("oculta");
+
+}
+
+
+function entrar() {
+
+    const contrasena =
+        document.getElementById("campoContrasena").value;
+
+    const mensaje =
+        document.getElementById("mensajeError");
+
+
+    if (contrasena === "cucu cucurella") {
+
+        document.getElementById("contrasena").classList.add("oculta");
+
+        document.getElementById("biblioteca").classList.remove("oculta");
+
+    } else {
+
+        mensaje.textContent =
+            "Esa no es la contraseña... intenta de nuevo.";
+
+    }
+
+}
+
+
+function abrirDiciembre() {
+
+    if (!cartaDesbloqueada("Diciembre")) {
+        return;
+    }
+
+    document.getElementById("biblioteca").classList.add("oculta");
+
+    document.getElementById("cartaDiciembre").classList.remove("oculta");
+
+}
+
+function abrirAbril() {
+
+    if (!cartaDesbloqueada("Abril")) {
+        return;
+    }
+
+    document.getElementById("biblioteca").classList.add("oculta");
+
+    document.getElementById("cartaAbril").classList.remove("oculta");
+
+}
+
+function abrirMayo() {
+
+    if (!cartaDesbloqueada("Mayo")) {
+        return;
+    }
+
+    document.getElementById("biblioteca").classList.add("oculta");
+
+    document.getElementById("cartaMayo").classList.remove("oculta");
+
+}
+
+function abrirJunio() {
+
+    if (!cartaDesbloqueada("Junio")) {
+        return;
+    }
+
+    document.getElementById("biblioteca").classList.add("oculta");
+
+    document.getElementById("cartaJunio").classList.remove("oculta");
+
+}
+
+function abrirJulio() {
+
+    if (!cartaDesbloqueada("Julio")) {
+        return;
+    }
+
+    document.getElementById("biblioteca").classList.add("oculta");
+
+    document.getElementById("cartaJulio").classList.remove("oculta");
+
+}
+
+function abrirOctubre() {
+
+    if (!cartaDesbloqueada("Octubre")) {
+        return;
+    }
+
+    document.getElementById("biblioteca").classList.add("oculta");
+
+    document.getElementById("cartaOctubre").classList.remove("oculta");
+
+}
+
+function abrirEnero() {
+
+    if (!cartaDesbloqueada("Enero")) {
+        return;
+    }
+
+    document.getElementById("biblioteca").classList.add("oculta");
+
+    document.getElementById("cartaEnero").classList.remove("oculta");
+
+}
+
+function abrirFebrero() {
+
+    if (!cartaDesbloqueada("Febrero")) {
+        return;
+    }
+
+    document.getElementById("biblioteca").classList.add("oculta");
+
+    document.getElementById("cartaFebrero").classList.remove("oculta");
+
+}
+
+function abrirMarzo() {
+
+    if (!cartaDesbloqueada("Marzo")) {
+        return;
+    }
+
+    document.getElementById("biblioteca").classList.add("oculta");
+
+    document.getElementById("cartaMarzo").classList.remove("oculta");
+
+}
+
+function abrirAgosto() {
+
+    if (!cartaDesbloqueada("Agosto")) {
+        return;
+    }
+
+    document.getElementById("biblioteca").classList.add("oculta");
+
+    document.getElementById("cartaAgosto").classList.remove("oculta");
+
+}
+
+
+function abrirSeptiembre() {
+
+    if (!cartaDesbloqueada("Septiembre")) {
+        return;
+    }
+
+    document.getElementById("biblioteca").classList.add("oculta");
+
+    document.getElementById("cartaSeptiembre").classList.remove("oculta");
+
+}
+
+function abrirNoviembre() {
+
+    if (!cartaDesbloqueada("Noviembre")) {
+        return;
+    }
+
+    document.getElementById("biblioteca").classList.add("oculta");
+
+    document.getElementById("cartaNoviembre").classList.remove("oculta");
+
+}
+
+function volverBiblioteca() {
+
+    document.getElementById("cartaDiciembre").classList.add("oculta");
+
+    document.getElementById("cartaAbril").classList.add("oculta");
+
+    document.getElementById("cartaMayo").classList.add("oculta");
+
+    document.getElementById("cartaJunio").classList.add("oculta");
+
+    document.getElementById("cartaJulio").classList.add("oculta");
+
+    document.getElementById("cartaOctubre").classList.add("oculta");
+
+    document.getElementById("cartaEnero").classList.add("oculta");
+
+    document.getElementById("cartaFebrero").classList.add("oculta");
+
+    document.getElementById("cartaMarzo").classList.add("oculta");
+
+    document.getElementById("cartaAgosto").classList.add("oculta");
+
+    document.getElementById("cartaSeptiembre").classList.add("oculta");
+
+    document.getElementById("cartaNoviembre").classList.add("oculta");
+
+    document.getElementById("biblioteca").classList.remove("oculta");
+
+}
+
+const fechasCartas = {
+
+    Agosto: new Date(2026, 7, 18, 0, 0, 0),
+
+    Septiembre: new Date(2026, 8, 18, 0, 0, 0),
+
+    Octubre: new Date(2026, 9, 18, 0, 0, 0),
+
+    Noviembre: new Date(2026, 10, 18, 0, 0, 0),
+
+    Diciembre: new Date(2026, 11, 18, 0, 0, 0),
+
+    Enero: new Date(2027, 0, 18, 0, 0, 0),
+
+    Febrero: new Date(2027, 1, 18, 0, 0, 0),
+
+    Marzo: new Date(2027, 2, 18, 0, 0, 0),
+
+    Abril: new Date(2027, 3, 18, 0, 0, 0),
+
+    Mayo: new Date(2027, 4, 18, 0, 0, 0),
+
+    Junio: new Date(2027, 5, 18, 0, 0, 0),
+
+    Julio: new Date(2027, 6, 18, 0, 0, 0)
+
+};
+
+function cartaDesbloqueada(mes) {
+
+    return new Date() >= fechasCartas[mes];
+
+}
+
+
+function actualizarContadores() {
+
+    const ahora = new Date();
+
+
+    for (const mes in fechasCartas) {
+
+        const fecha = fechasCartas[mes];
+
+        const contador =
+            document.getElementById("contador" + mes);
+
+        const boton =
+            document.querySelector(
+                '#biblioteca button[onclick="abrir' + mes + '()"]'
+            );
+
+
+        if (!contador || !boton) {
+            continue;
+        }
+
+
+        const diferencia = fecha - ahora;
+
+
+        if (diferencia <= 0) {
+
+            contador.textContent =
+                "Ya puedes abrir esta carta.";
+
+            boton.disabled = false;
+
+        } else {
+
+            boton.disabled = true;
+
+            const dias =
+                Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+            const horas =
+                Math.floor(
+                    (diferencia / (1000 * 60 * 60)) % 24
+                );
+
+            const minutos =
+                Math.floor(
+                    (diferencia / (1000 * 60)) % 60
+                );
+
+
+            if (dias > 0) {
+
+                contador.textContent =
+                    "🔒 Faltan " + dias +
+                    (dias === 1 ? " día" : " días");
+
+            } else if (horas > 0) {
+
+                contador.textContent =
+                    "🔒 Faltan " + horas +
+                    (horas === 1 ? " hora" : " horas");
+
+            } else {
+
+                contador.textContent =
+                    "🔒 Faltan " + minutos +
+                    (minutos === 1 ? " minuto" : " minutos");
+
+            }
+
+        }
+
+    }
+
+}
+
+
+actualizarContadores();
+
+setInterval(actualizarContadores, 60000);
+
+</script>
+
+</body>
+</html>
